@@ -46,7 +46,7 @@ class OrderInfoRetriever:
 
   def load_mail(self):
     mail = email_auth.email_authentication()
-    mail.select('"[Gmail]/All Mail"')
+    mail.select('"[Google Mail]/All Mail"')
     return mail
 
   @debounce(5)

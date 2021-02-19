@@ -227,7 +227,7 @@ class EmailTrackingRetriever(ABC):
 
   def get_all_mail_folder(self) -> imaplib.IMAP4_SSL:
     mail = email_auth.email_authentication()
-    mail.select('"[Gmail]/All Mail"')
+    mail.select('"[Google Mail]/All Mail"')
     return mail
 
   def get_email_ids(self) -> Any:
@@ -288,7 +288,7 @@ def clean_email_content(email_str) -> str:
 
 
 def log_in_if_necessary(driver: WebDriver, config):
-  driver.get('https://www.amazon.com/gp/your-account/order-history/ref=ppx_yo_dt_b_orders')
+  driver.get('https://www.amazon.com/gp/your-account/order-history/')
   if 'amazon' in config:
     print("Signing into Amazon ...")
     driver.find_element_by_css_selector('input[type="email"]').send_keys(config['amazon']['email'])

@@ -1,0 +1,1 @@
+"C:\Program Files\Git\bin\sh.exe" --login -i -c "python get_tracking_numbers.py"

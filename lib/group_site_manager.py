@@ -616,7 +616,7 @@ class GroupSiteManager:
 
   def _get_all_mail_folder(self) -> IMAP4_SSL:
     mail = email_auth.email_authentication()
-    mail.select('"[Gmail]/All Mail"')
+    mail.select('"[Google Mail]/All Mail"')
     return mail
 
   def _get_bfmr_costs(self) -> TrackingInfoDict:

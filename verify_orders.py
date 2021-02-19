@@ -86,7 +86,7 @@ def get_email_ids(mail, args):
 
 def get_order_ids_to_orders(args):
   mail = email_auth.email_authentication()
-  mail.select('"[Gmail]/All Mail"')
+  mail.select('"[Google Mail]/All Mail"')
   email_ids = get_email_ids(mail, args)
 
   config = open_config()

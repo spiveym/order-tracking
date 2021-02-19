@@ -140,7 +140,7 @@ class CancelledItemsRetriever:
   @retry(stop=stop_after_attempt(4), wait=wait_exponential(multiplier=1, min=2, max=120))
   def load_mail(self):
     mail = email_auth.email_authentication()
-    mail.select('"[Gmail]/All Mail"')
+    mail.select('"[Google Mail]/All Mail"')
     return mail
 
   @retry(stop=stop_after_attempt(4), wait=wait_exponential(multiplier=1, min=2, max=120))
