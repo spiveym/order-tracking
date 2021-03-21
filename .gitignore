@@ -25,3 +25,6 @@ chrome/*/chrome-win32
 .profiles/
 exports/
 reports/
+
+tracking.bat
+Tracking Number Scrape.bat
